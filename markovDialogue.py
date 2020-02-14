@@ -1,7 +1,7 @@
 import markovify
 
 # Get raw text as string.
-with open("dwight.txt") as f:
+with open("data/dwight.txt") as f:
     text = f.read()
 
 # Build the model.
@@ -15,7 +15,6 @@ text_model = markovify.Text(text)
 # for i in range(3):
 #     print(text_model.make_short_sentence(280))
 
-#generate the sentences and write to CSV file
+# Generate sentences.
 for i in range(1000):
     print(text_model.make_short_sentence(140))
-    #writer.writerow(text_model.make_short_sentence(140))
